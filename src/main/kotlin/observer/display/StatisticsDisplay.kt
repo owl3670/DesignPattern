@@ -19,7 +19,9 @@ class StatisticsDisplay(
         println("Avg/Max/Min temperature = $tempSum/$maxTemp/$minTemp")
     }
 
-    override fun update(temperature: Float, humidity: Float, pressure: Float) {
+    override fun update() {
+        val temperature = weatherData.temperature
+
         tempSum += temperature
         numReadings++
 

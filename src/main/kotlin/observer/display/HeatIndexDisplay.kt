@@ -16,7 +16,9 @@ class HeatIndexDisplay(
         println("Heat index is $heatIndex")
     }
 
-    override fun update(temperature: Float, humidity: Float, pressure: Float) {
+    override fun update() {
+        val temperature = weatherData.temperature
+        val humidity = weatherData.humidity
         heatIndex = computeHeatIndex(temperature, humidity)
         display()
     }

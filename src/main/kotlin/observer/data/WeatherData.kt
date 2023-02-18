@@ -24,9 +24,7 @@ class WeatherData : Subject {
     }
 
     override fun notifyObservers() {
-
-
-        observers.forEach { it.update(temperature, humidity, pressure) }
+        observers.forEach { it.update() }
     }
 
     fun measurementsChanged() {

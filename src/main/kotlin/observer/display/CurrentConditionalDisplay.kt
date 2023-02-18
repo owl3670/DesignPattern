@@ -17,9 +17,9 @@ class CurrentConditionalDisplay(
         println("Current conditions: $temperature F degrees and $humidity% humidity")
     }
 
-    override fun update(temperature: Float, humidity: Float, pressure: Float) {
-        this.temperature = temperature
-        this.humidity = humidity
+    override fun update() {
+        this.temperature = weatherData.temperature
+        this.humidity = weatherData.humidity
         display()
     }
 }

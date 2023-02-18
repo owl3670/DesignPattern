@@ -17,9 +17,9 @@ class ForecastDisplay(
         println("Forecast: ${getForecast()}")
     }
 
-    override fun update(temperature: Float, humidity: Float, pressure: Float) {
+    override fun update() {
         lastPressure = currentPressure
-        currentPressure = pressure
+        currentPressure = weatherData.pressure
         display()
     }
 
