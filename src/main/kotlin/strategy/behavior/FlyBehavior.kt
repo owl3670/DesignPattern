@@ -1,4 +1,4 @@
-package first.behavior
+package strategy.behavior
 
 interface FlyBehavior {
     fun fly()

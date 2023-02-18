@@ -1,4 +1,4 @@
-package first.behavior
+package strategy.behavior
 
 class FlyRocketPowered : FlyBehavior {
     override fun fly() {

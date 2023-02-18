@@ -1,8 +1,8 @@
-package first
+package strategy
 
-import first.behavior.FlyRocketPowered
-import first.duck.MallardDuck
-import first.duck.ModelDuck
+import strategy.behavior.FlyRocketPowered
+import strategy.duck.MallardDuck
+import strategy.duck.ModelDuck
 
 class MiniDuckSimulator {
     companion object {

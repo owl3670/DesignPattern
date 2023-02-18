@@ -1,9 +1,9 @@
-package first.duck
+package strategy.duck
 
-import first.behavior.FlyBehavior
-import first.behavior.FlyWithWings
-import first.behavior.Quack
-import first.behavior.QuackBehavior
+import strategy.behavior.FlyBehavior
+import strategy.behavior.FlyWithWings
+import strategy.behavior.Quack
+import strategy.behavior.QuackBehavior
 
 abstract class Duck {
     var flyBehavior: FlyBehavior = FlyWithWings()

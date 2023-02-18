@@ -1,7 +1,7 @@
-package first.duck
+package strategy.duck
 
-import first.behavior.FlyNoWay
-import first.behavior.Quack
+import strategy.behavior.FlyNoWay
+import strategy.behavior.Quack
 
 class ModelDuck : Duck() {
     init {
