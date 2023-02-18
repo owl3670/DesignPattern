@@ -1,4 +1,4 @@
-package first
+package first.duck
 
 import first.behavior.FlyBehavior
 import first.behavior.FlyWithWings
@@ -14,9 +14,11 @@ abstract class Duck {
     fun performFly() {
         flyBehavior.fly()
     }
+
     fun performQuack() {
         quackBehavior.quack()
     }
+
     fun swim() {
         println("All ducks float, even decoys!")
     }

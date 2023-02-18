@@ -1,4 +1,4 @@
-package first
+package first.duck
 
 import first.behavior.FlyWithWings
 import first.behavior.Quack

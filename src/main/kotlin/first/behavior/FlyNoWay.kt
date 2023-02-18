@@ -1,7 +1,7 @@
 package first.behavior
 
-class FlyNoWay : QuackBehavior {
-    override fun quack() {
+class FlyNoWay : FlyBehavior {
+    override fun fly() {
         println("I can't fly")
     }
 }
