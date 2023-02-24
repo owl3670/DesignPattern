@@ -27,8 +27,4 @@ abstract class Pizza {
     fun box() {
         println("Place pizza in official PizzaStore box")
     }
-
-    fun getName(): String? {
-        return name
-    }
 }
