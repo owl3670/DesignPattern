@@ -7,10 +7,6 @@ class RemoteControl {
 
     init {
         val noCommand = NoCommand()
-        for (i in 0 until 7) {
-            onCommands[i] = noCommand
-            offCommands[i] = noCommand
-        }
         undoCommand = noCommand
     }
 

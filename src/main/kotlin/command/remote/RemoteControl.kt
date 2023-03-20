@@ -4,14 +4,6 @@ class RemoteControl {
     private val onCommands: Array<Command> = Array(7) { NoCommand() }
     private val offCommands: Array<Command> = Array(7) { NoCommand() }
 
-    init {
-        val noCommand = NoCommand()
-        for (i in 0 until 7) {
-            onCommands[i] = noCommand
-            offCommands[i] = noCommand
-        }
-    }
-
     fun setCommand(slot: Int, onCommand: Command, offCommand: Command) {
         onCommands[slot] = onCommand
         offCommands[slot] = offCommand
