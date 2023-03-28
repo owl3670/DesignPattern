@@ -1,5 +1,5 @@
 package command.remoteWL;
 
-interface Command {
+fun interface Command {
 	fun execute();
 }

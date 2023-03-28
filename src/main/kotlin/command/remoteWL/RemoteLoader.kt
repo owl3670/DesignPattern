@@ -12,56 +12,12 @@ class RemoteLoader {
             val garageDoor = GarageDoor("Main house")
             val stereo = Stereo("Living Room")
 
-            remoteControl.setCommand(0, object : Command {
-                override fun execute() {
-                    livingRoomLight.on()
-                }
-            }
-            , object : Command {
-                override fun execute() {
-                    livingRoomLight.off()
-                }
-            })
-            remoteControl.setCommand(1, object : Command {
-                override fun execute() {
-                    kitchenLight.on()
-                }
-            }, object : Command {
-                override fun execute() {
-                    kitchenLight.off()
-                }
-            })
-            remoteControl.setCommand(2, object : Command {
-                override fun execute() {
-                    ceilingFan.high()
-                }
-            }, object : Command {
-                override fun execute() {
-                    ceilingFan.off()
-                }
-            })
-
-            val stereoOnWithCD = object : Command {
-                override fun execute() {
-                    stereo.on()
-                    stereo.setCD()
-                    stereo.setVolume(11)
-                }
-            }
-            remoteControl.setCommand(3, stereoOnWithCD, object : Command {
-                override fun execute() {
-                    stereo.off()
-                }
-            })
-            remoteControl.setCommand(4, object : Command {
-                override fun execute() {
-                    garageDoor.up()
-                }
-            }, object : Command {
-                override fun execute() {
-                    garageDoor.down()
-                }
-            })
+            remoteControl.setCommand(0, livingRoomLight::on, livingRoomLight::off)
+            remoteControl.setCommand(1, kitchenLight::on, kitchenLight::off)
+            remoteControl.setCommand(2, ceilingFan::high, ceilingFan::off)
+            val stereoOnWithCD = { stereo.on(); stereo.setCD(); stereo.setVolume(11) }
+            remoteControl.setCommand(3, stereoOnWithCD, stereo::off)
+            remoteControl.setCommand(4, garageDoor::up, garageDoor::down)
 
             println(remoteControl)
 
