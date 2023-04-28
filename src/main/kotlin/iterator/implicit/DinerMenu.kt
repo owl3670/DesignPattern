@@ -42,10 +42,6 @@ class DinerMenu : Menu {
         }
     }
 
-    fun getMenuItems(): Array<MenuItem?> {
-        return menuItems
-    }
-
     override fun createIterator(): Iterator<MenuItem?> {
         return DinerMenuIterator(menuItems)
     }
