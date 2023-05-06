@@ -1,28 +1,18 @@
-package headfirst.designpatterns.iterator.dinermerger
+package iterator.dinermerger
 
 import java.util.*
 
-class AlternatingDinerMenuIterator(list: Array<MenuItem?>) : Iterator {
-    var list: Array<MenuItem?>
-    var position: Int
+class AlternatingDinerMenuIterator(private val list: Array<MenuItem?>) : Iterator {
+    var position: Int = Calendar.DAY_OF_WEEK % 2
 
-    init {
-        this.list = list
-        position = Calendar.DAY_OF_WEEK % 2
-    }
-
-    operator fun next(): MenuItem? {
+    override fun next(): MenuItem? {
         val menuItem: MenuItem? = list[position]
-        position = position + 2
+        position += 2
         return menuItem
     }
 
-    operator fun hasNext(): Boolean {
-        return if (position >= list.size || list[position] == null) {
-            false
-        } else {
-            true
-        }
+    override fun hasNext(): Boolean {
+        return !(position >= list.size || list[position] == null)
     }
 
     override fun toString(): String {
